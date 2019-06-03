@@ -249,12 +249,6 @@
  <Reference Include="Unity.Locator">
  <HintPath>D:/Soft/Unity/2018.2.21f1/Editor/Data/Managed/Unity.Locator.dll</HintPath>
  </Reference>
- <Reference Include="Assembly-CSharp-firstpass">
- <HintPath>D:/Repo/CKD/CyberKanoiD/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
- </Reference>
- <Reference Include="Assembly-CSharp-Editor-firstpass">
- <HintPath>D:/Repo/CKD/CyberKanoiD/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Soft/Unity/2018.2.21f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

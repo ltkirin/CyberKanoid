@@ -59,6 +59,8 @@
     <Compile Include="Assets\Scripts\GameObjects\Controller\common\BaseController.cs" />
     <Compile Include="Assets\Scripts\GameObjects\Model\common\BaseModel.cs" />
     <Compile Include="Assets\Scripts\GameObjects\View\common\BaseView.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool\interfaces\IObjectPool.cs" />
+    <Compile Include="Assets\Scripts\ObjectPool\ObjectPool.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/Repo/CKD/CyberKanoiD/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
@@ -250,9 +252,6 @@
     </Reference>
     <Reference Include="Unity.Locator">
       <HintPath>D:/Soft/Unity/2018.2.21f1/Editor/Data/Managed/Unity.Locator.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp-firstpass">
-      <HintPath>D:/Repo/CKD/CyberKanoiD/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/Soft/Unity/2018.2.21f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

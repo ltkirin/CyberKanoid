@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Cyberkanoid.Scripts.GameObjects.View.common
 {
 
-    public class BaseView : MonoBehaviour
+    public abstract class BaseView : MonoBehaviour
     {
         [SerializeField]
         protected GUID id;

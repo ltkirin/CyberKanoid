@@ -1,0 +1,2 @@
+D:\Repo\CKD\CyberKanoiD\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\Repo\CKD\CyberKanoiD\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
