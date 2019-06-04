@@ -1,30 +1,29 @@
+using Assets.Scripts.GameField.Borders;
 using UnityEngine;
 
 namespace Cyberkanoid.Scripts.GameObjects.Controller.common
 {
-    public class BoardController : MonoBehaviour
+    public class BordersController : MonoBehaviour
     {
         [SerializeField] private Transform topBorder;
         [SerializeField] private Transform leftBorder;
         [SerializeField] private Transform rightBorder;
         [SerializeField] private int topPercent;
         [SerializeField] private int sidePercent;
+        private int screenWidth;
+        private int screenHeight;
 
         private Camera camera;
 
         private void Awake()
         {
             camera = Camera.main;
+            SetBorderPosition(topBorder, BorderPosition.Top);
+            SetBorderPosition(leftBorder, BorderPosition.Left);
+            SetBorderPosition(rightBorder, BorderPosition.Right);
         }
 
-        private void Update()
-        {
-            StayBorderPosition(topBorder, Stay.Top);
-            StayBorderPosition(leftBorder, Stay.Left);
-            StayBorderPosition(rightBorder, Stay.Right);
-        }
-
-        private void StayBorderPosition(Transform border, Stay stay)
+        private void SetBorderPosition(Transform border, BorderPosition stay)
         {
             int width = camera.pixelWidth;
             int height = camera.pixelHeight;
@@ -33,7 +32,7 @@ namespace Cyberkanoid.Scripts.GameObjects.Controller.common
 
             switch (stay)
             {
-                case Stay.Top:
+                case BorderPosition.Top:
                     position = camera.ScreenToWorldPoint(new Vector2(width / 2, height));
 
                     border.localScale = new Vector3(camera.ScreenToWorldPoint(new Vector2(width, 0)).x / 2 + border.localScale.x * 0.125f,
@@ -42,7 +41,8 @@ namespace Cyberkanoid.Scripts.GameObjects.Controller.common
 
                     border.position = Vector2.right * position.x + Vector2.up * (position.y - border.localScale.y * 1.75f);
                     break;
-                case Stay.Left:
+
+                case BorderPosition.Left:
                     position = camera.ScreenToWorldPoint(new Vector2(0, height / 2));
 
                     border.localScale = new Vector3(camera.ScreenToWorldPoint(new Vector2(width, 0)).x / (100 / sidePercent),
@@ -51,15 +51,16 @@ namespace Cyberkanoid.Scripts.GameObjects.Controller.common
 
                     border.position = Vector2.right * (position.x + border.localScale.x * 1.75f) + Vector2.up * position;
                     break;
-                case Stay.Right:
+
+                case BorderPosition.Right:
                     position = camera.ScreenToWorldPoint(new Vector2(width, height / 2));
 
                     border.localScale = new Vector3(camera.ScreenToWorldPoint(new Vector2(width, 0)).x / (100 / sidePercent),
                                                     camera.ScreenToWorldPoint(new Vector2(0, height)).y / 2 + border.localScale.y * 0.125f,
                                                     border.localScale.z);
-
                     border.position = Vector2.right * (position.x - border.localScale.x * 1.75f) + Vector2.up * position;
                     break;
+
                 default:
                     position = camera.ScreenToWorldPoint(new Vector2(width / 2, height / 2));
                     border.position = Vector2.right * (position.x) + Vector2.up * position;
@@ -67,11 +68,5 @@ namespace Cyberkanoid.Scripts.GameObjects.Controller.common
             }
         }
 
-        private enum Stay
-        {
-            Top,
-            Left,
-            Right
-        }
     }
 }

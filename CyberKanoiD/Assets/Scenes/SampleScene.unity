@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -305,7 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 663694676}
   m_Layer: 0
-  m_Name: Boards
+  m_Name: Borders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -322,9 +322,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1909369731}
+  - {fileID: 1420573647}
   - {fileID: 946983971}
   - {fileID: 1222721557}
-  - {fileID: 1420573647}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -402,7 +402,7 @@ Transform:
   m_LocalScale: {x: 3.8122635, y: 0.12571134, z: 1.0011002}
   m_Children: []
   m_Father: {fileID: 663694676}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &946983973
 BoxCollider2D:
@@ -452,12 +452,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1222721556}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6.335, y: -0.01464, z: 0}
   m_LocalScale: {x: 0.21206677, y: 2.8654227, z: 1}
   m_Children: []
   m_Father: {fileID: 663694676}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1222721558
 BoxCollider2D:
@@ -558,7 +558,7 @@ Transform:
   m_LocalScale: {x: 0.2120668, y: 2.86814, z: 1}
   m_Children: []
   m_Father: {fileID: 663694676}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1420573648
 BoxCollider2D:
@@ -641,7 +641,7 @@ GameObject:
   - component: {fileID: 1909369731}
   - component: {fileID: 1909369732}
   m_Layer: 0
-  m_Name: BoardController
+  m_Name: BordersController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -674,5 +674,5 @@ MonoBehaviour:
   topBorder: {fileID: 946983971}
   leftBorder: {fileID: 1222721557}
   rightBorder: {fileID: 1420573647}
-  topPercent: 10
-  sidePercent: 5
+  topPercent: 5
+  sidePercent: 1
